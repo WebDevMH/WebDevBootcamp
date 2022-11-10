@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('Roboto-Black.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('Roboto-Light.ttf') format('TrueType');
+}
+
+/* Below code removes the default values */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Makes it so the background image stretches to fill the page*/
+body {
+  background: url(./math.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.calculator {
+  background: #101010;
+  width: 25em;
+  margin: 5em auto;
+  border-end-end-radius: 2.5em;
+  border-bottom-left-radius: 2.5em;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/* Affects the top display of the calculator. Lineheight edits allows the numbers to be displayed lower within the display div */
+.display {
+  background: #011116;
+  color: #ffffff;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  height: 6em;
+  line-height: 8em;
+  padding: 0 1.5em;
+  border-radius: 1em;
+  font-family: 'Roboto-Light';
+}
+
+/* 1fr x4 adds 4 rows max, can increase */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.7em 0;
+  margin: auto 0.5em;
+}
+
+/* take note of how you are affecting the buttons within the "controls" div element. Cursor changes the cursor when hovering. Margin is adding space around the buttons
+unset unsets the default border*/
+.controls button {
+  background: #222222;
+  color: #ffffff;
+  height: 5.5em;
+  cursor: pointer;
+  margin: 0.5em;
+  border: unset;
+  border-radius: 0.5em;
+  outline: unset;
+  font-size: 1em;
+  font-family: 'Roboto-Black';
+}
+
+/*take note of the below code, there are clearly more ways to target styling options on elements WITHIN a div*/
+.controls button:hover {
+  background: #333333;
+}
+
+/*This code makes the button ACTIVATE/Push etc move the button on its Y axis up via the value in the brackets*/
+.controls button:active {
+  transform: translateY(0.5em);
+  font-family: 'Roboto-Black';
+}
+
+.controls .teal {
+  background: #005755;
+}
+
+.controls .teal:hover {
+  background: #006664;
+}
+
+.controls .orange {
+  background: #e28126;
+}
+
+.controls .orange:hover {
+  background: #a56930;
+}
+
+.controls .red {
+  background: #e20000;
+}
+
+.controls .red:hover {
+  background: #940000;
+}
