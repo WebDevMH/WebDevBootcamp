@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  background: linear-gradient(0deg, #36a4ff, #252525 70%) fixed no-repeat;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 10vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+header h1 {
+  padding-top: 2vh;
+  text-align: center;
+  font-size: 150%;
+}
+
+header h2 {
+  padding-top: 0.5vh;
+  text-align: center;
+  font-size: 80%;
+}
+
+.shoppingcart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 40px;
+  padding-right: 50px;
+}
+
+.filmcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  max-height: 100vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  bottom: 0;
+  height: 100%;
+}
+
+.filmcontainer img {
+  margin: 10px;
+  border: 3px solid rgba(109, 109, 109, 0.171);
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  max-width: 20vw;
+  max-height: 250px;
+}
+
+.image {
+  display: block;
+  width: 20%;
+  height: auto;
+  border: 3px solid rgba(109, 109, 109, 0.171);
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 20%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  max-height: 100vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  bottom: 0;
+  height: 100%;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.outercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  max-height: 100vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+}
