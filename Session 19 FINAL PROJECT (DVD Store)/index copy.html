@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Second-Take Films 💿</title>
+  </head>
+  <body>
+    <!--Below is the HEADER-->
+
+    <header>
+      <h1><b>Second-Take Films</b> 📀</h1>
+
+      <!--Below is the Shopping Cart Button-->
+      <div class="shoppingcart">
+        <a href="cart.html">
+          <svg
+            class="w-12 h-12"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            ></path></svg
+        ></a>
+      </div>
+    </header>
+
+    <!--Below is the Nav and Search Bar-->
+
+    <div>
+      <nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="#" class="flex items-center">
+            <div class="disclogo">💿</div>
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white dark:bg-black"
+              >Pre-owned 4K HDR and Blu-Rays</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
+                  aria-current="page"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
+                  aria-current="page"
+                  >All Films</a
+                >
+              </li>
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Browse Genres
+                  <svg
+                    class="w-5 h-5 ml-1"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Animation</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Biography</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Crime</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Documentary</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Drama</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Horror</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Mystery</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Science Fiction</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Sport</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Thriller</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Western</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Sell</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--Below is the main content-->
+    <div class="container px-1 py-2 mx-auto lg:pt-12 lg:px-32">
+      <div class="flex justify-start pt-5">
+        <div class="outercontainer">
+          <div class="container1">
+            <img src="./images/coversmall/cityofgodS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/darkknightS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/spirawayS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/matrixS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/interstellarS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/fightclubS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/godfatherS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/goodbaduglyS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container2">
+            <img src="./images/coversmall/harakiriS.png" alt="Avatar" class="image" />
+            <div class="overlay2">
+              <div class="text">
+                <p>
+                  <button
+                    type="button"
+                    class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Out Of Stock!
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container1">
+            <img src="./images/coversmall/inceptionS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/manwithamoviecameraS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/pulpfictionS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/sevenS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/sshankS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/thefogS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1">
+            <img src="./images/coversmall/theyliveS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container1 rounded">
+            <img src="./images/coversmall/whiplashS.png" alt="Avatar" class="image" />
+            <div class="overlay">
+              <div class="text">
+                <button
+                  type="button"
+                  class="inline-block px-6 py-2.5 bg-green-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Below is a Tailwind footer-->
+
+    <div class="fixed inset-x-0 bottom-0 left-0">
+      <footer
+        class="p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-1 dark:bg-gray-600 w-full h-16 fixed left-0 bottom-0"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2022 <a href="index.html" class="hover:underline">Second Take Films™</a>. All Rights
+          Reserved.
+        </span>
+        <div class="flex justify-center items-center flex-wrap space-x-2">
+          <!-- Facebook -->
+          <button
+            type="button"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 mb-2 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+            style="background-color: #1877f2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-4 h-3">
+              <path
+                fill="currentColor"
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+              />
+            </svg>
+          </button>
+          <!-- Instagram -->
+          <button
+            type="button"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 mb-2 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+            style="background-color: #c13584"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-3">
+              <path
+                fill="currentColor"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              />
+            </svg>
+          </button>
+          <!-- Twitter -->
+          <button
+            type="button"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light"
+            class="inline-block px-6 py-2.5 mb-2 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+            style="background-color: #1da1f2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-3">
+              <path
+                fill="currentColor"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+        >
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

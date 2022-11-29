@@ -1,0 +1,116 @@
+:root {
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /* ---- Primary Colors ----*/
+  --primary-cyan: hsl(193, 38%, 86%);
+  --primary-green: hsl(150, 100%, 66%);
+
+  /* ---- Neutral Colors ----*/
+  --neutral-blue: hsl(217, 19%, 38%);
+  --dark-grayish: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+textarea {
+  font-size: 100%;
+  font-family: 'Manrope', sans-serif;
+  color: var(--primary-cyan);
+  text-align: center;
+  font-weight: 800;
+}
+
+html {
+  background-color: var(--neutral-dark-blue);
+}
+
+/* keeps the main box in the middle? */
+main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: var(--primary-green);
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.25rem;
+}
+
+.card {
+  background-color: var(--dark-grayish);
+  width: 21.437rem;
+  height: 19.687rem;
+  border-radius: 0.625rem;
+  box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
+  overflow: hidden;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rectangle {
+  height: 0.0625rem;
+  width: 7.625rem;
+  background-color: var(--primary-cyan);
+}
+
+.btn-circle {
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  align-self: center;
+  bottom: -2rem;
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-circle:hover {
+  box-shadow: 0 0 30px var(--primary-green);
+}
+
+.middle-rec {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mid-rec {
+  height: 1rem;
+  width: 0.375rem;
+  border-radius: 0.1875rem;
+  background-color: var(--primary-cyan);
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 33.75rem;
+    height: 20.75;
+  }
+
+  .rectangle {
+    width: 12.25rem;
+  }
+}

@@ -44,13 +44,13 @@ header h2 {
 .container1 {
   display: inline-block;
   position: relative;
-  max-width: 10%;
+  max-width: 12%;
 }
 
 .container2 {
   display: inline-block;
   position: relative;
-  max-width: 10%;
+  max-width: 12%;
 }
 
 .container1:hover .overlay {

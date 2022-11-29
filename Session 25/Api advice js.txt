@@ -1,0 +1,28 @@
+ <script>
+        // get the different elements from the document and store in variables
+        const button = document.getElementById('dice');
+        const idElement = document.querySelector('.advice-slip__id span');
+        const msgElement = document.querySelector('.advice-slip__message');
+
+        // add an event listener to the button which calls the getRandom function
+        button.addEventListener('click', getRandom );
+
+        
+        function getRandom() {
+            // makes a http GET request to the api and returns the data
+            fetch('https://api.adviceslip.com/advice')
+                .then(function(res){
+                    return res.json() // returns data in js readable format
+                })
+                .then(function(data){
+                    console.log(data) // data is now in js object
+                    // insert the fecth advice id and message into the elements of the page
+                    idElement.innerHTML = data.slip.id;
+                    msgElement.innerHTML = data.slip.advice;
+                })
+                .catch(function(err){ 
+                    return err.message; 
+                })
+        }
+        
+    </script>

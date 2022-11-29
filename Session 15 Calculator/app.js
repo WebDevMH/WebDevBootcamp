@@ -26,14 +26,14 @@ const calculate = () => {
   secondValue = '';
 };
 
-/* I haven't got a clue, unsure where to start?*/
+/* Not sure on these, lots of if statements, but need to break down bit by bit*/
 for (let button of controlButtons) {
   button.addEventListener('click', () => {
     const { innerText: btnValue } = button;
     const btnValueIsSymbol = allSymbols.includes(btnValue);
 
     if (!secondValue && btnValue === '=') return null;
-    /*This if statement clears display if button C is called*/
+    /*This if statement clears display if button C is called?*/
     if (btnValue === 'C') {
       firstValue = secondValue = symbol = '';
       return (display.innerText = '');
